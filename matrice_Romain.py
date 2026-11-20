@@ -18,8 +18,27 @@ def tour(joueurActu):   #joueur1 = True et joueur2(bot) = False
 
     return joueurActu
 
-def clic():
-    caseChoisi=int(input("Entrer la case que vous voulez jouer (0-8)")) 
+def caseTable():
+    caseChoisi=int(input("Entrer la case que vous voulez jouer (0-8)"))
+    if caseChoisi==0:
+        x=0,y=0
+    elif caseChoisi==1:
+        x=1,y=0
+    elif caseChoisi==2:
+        x=2,y=0
+    elif caseChoisi==3:
+        x=0,y=1
+    elif caseChoisi==4:
+        x=1,y=1
+    elif caseChoisi==5:
+        x=2,y=1
+    elif caseChoisi==6:
+        x=0,y=2
+    elif caseChoisi==7:
+        x=1,y=2
+    elif caseChoisi==8:
+        x=2,y=2
+    
     return caseChoisi
 
 def carteJoue():
@@ -32,5 +51,7 @@ def distrib(listeCartes): #A faire quand on aura les classes
 
 def jeux(tableJeux,mainJoueur_1,mainJoueur_2,joueurActu):
     if joueurActu:
+            carteActu=carteJoue
+            
             mainJoueur_1[carteActu]
             pass
