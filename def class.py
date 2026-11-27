@@ -17,17 +17,22 @@ class carte:
     def Vfight(topcard,bottomcard):
         #retourne quelle carte est la plus forte dans un combat vertical, insérer la carte situé en haut en première
         if topcard.bottom>bottomcard.top:
+            bottomcard.color=topcard.color
             return topcard
         if topcard.bottom<bottomcard.top:
+            topcard.color=bottomcard.color
             return bottomcard
         return None
     def Hfight(leftcard,rightcard):
         #retourne quelle carte est la plus forte dans un combat horizontal, insérer la carte situé en gauche en première
         if leftcard.right>rightcard.left:
+            rightcard.color=leftcard.color
             return leftcard
         if leftcard.right<rightcard.left:
+            leftcard.color=rightcard.color
             return rightcard
         return None
+    
 a=carte('a',1,1,1,1,'bleu')
 b=carte('b',1,3,1,1,'rouge')
 print(a,b)
